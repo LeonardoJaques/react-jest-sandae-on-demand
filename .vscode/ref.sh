@@ -1,4 +1,4 @@
-create in root of project a file with name => eslinttc.json
+create in root of project a file with name => .eslintrc.json
 {
   "plugins": ["testing-library", "jest-dom"],
   "extends": [
@@ -18,7 +18,9 @@ create a file in .vscode with name => settings.json
   "eslint.validate": ["javascript", "javascriptreact"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
 
 install: npm i -D eslint-plugin-testing-library eslint-plugin-jest-dom
