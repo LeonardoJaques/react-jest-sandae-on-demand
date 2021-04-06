@@ -1,5 +1,6 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import SummaryForm from './SummaryForm';
+import userEvent from '@testing-library/user-event';
 
 describe('First testing', () => {
   test('Initial Conditionals', () => {
@@ -26,14 +27,24 @@ describe('First testing', () => {
     });
 
     //should checkbox true
-    fireEvent.click(checkbox);
+    userEvent.click(checkbox);
     expect(checkbox).toBeChecked();
 
     //should button enable
     expect(confirmButton).toBeEnabled();
 
     // should checkbox false the button will be disable
-    fireEvent.click(checkbox);
+    userEvent.click(checkbox);
     expect(confirmButton).toBeDisabled();
   });
+
+  test("Popover response to hover", () => {
+    // popover start out hidden
+    
+
+    // popover appears upon mouseover of checkbox label
+
+    // popover disappears when we mouse out
+  })
+
 });
