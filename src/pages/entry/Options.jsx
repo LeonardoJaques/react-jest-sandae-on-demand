@@ -4,9 +4,9 @@ import ScoopOtions from './ScoopOptions';
 import { Row } from 'react-bootstrap';
 import ToppingOptions from './ToppingOptions';
 import AlertBanner from '../common/AlertBanner';
-import { pricePerItem } from '../constants';
-import { useOrderDetails } from '../contexts/OrderDetails';
-import { formatCurrency } from '../utilities';
+import { pricePerItem } from '../../constants';
+import { useOrderDetails } from '../../contexts/OrderDetails';
+import { formatCurrency } from '../../utilities';
 
 function Options({ optionType }) {
   const [items, setItems] = useState([]);

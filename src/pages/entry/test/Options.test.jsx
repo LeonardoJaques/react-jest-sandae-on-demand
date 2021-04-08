@@ -1,4 +1,4 @@
-import { render, screen } from '../../test-utils/testing-library-utils';
+import { render, screen } from '../../../test-utils/testing-library-utils';
 import Options from '../Options';
 
 test('Displays image for each scoops option from server', async () => {

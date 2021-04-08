@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useMemo, useEffect } from 'react';
-import { pricePerItem } from '../constants';
-import { formatCurrency } from '../utilities';
+import { pricePerItem } from '../../src/constants';
+import { formatCurrency } from '../../src/utilities';
 
 // @ts-ignore
 const OrderDetails = createContext();

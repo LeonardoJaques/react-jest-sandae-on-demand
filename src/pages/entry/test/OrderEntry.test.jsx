@@ -2,7 +2,8 @@ import {
   render,
   screen,
   waitFor,
-} from '../../test-utils/testing-library-utils';
+} from '../../../test-utils/testing-library-utils';
+
 import OrderEntry from '../OrderEntry';
 import { rest } from 'msw';
 import { server } from '../../../mocks/server';
@@ -19,7 +20,7 @@ test('handlers error for scoops and toppings routes', () => {
 
   render(<OrderEntry />);
 
-   waitFor(async () => {
+  waitFor(async () => {
     const alerts = await screen.findAllByText(
       'An unexpected error occurred. Please try again later.'
     );
