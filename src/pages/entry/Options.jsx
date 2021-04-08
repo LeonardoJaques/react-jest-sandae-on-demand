@@ -6,6 +6,7 @@ import ToppingOptions from './ToppingOptions';
 import AlertBanner from '../common/AlertBanner';
 import { pricePerItem } from '../constants';
 import { useOrderDetails } from '../contexts/OrderDetails';
+import { formatCurrency } from '../utilities';
 
 function Options({ optionType }) {
   const [items, setItems] = useState([]);
@@ -14,8 +15,8 @@ function Options({ optionType }) {
 
   // optionType is 'scoops'|colheres or 'toppings'|coberturas
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    axios
+  useEffect(async () => {
+    await axios
       .get(`http://localhost:3030/${optionType}`)
       .then((response) => setItems(response.data))
       .catch((error) => setError(true));
@@ -40,7 +41,7 @@ function Options({ optionType }) {
   return (
     <>
       <h2>{title}</h2>
-      <p>{pricePerItem[optionType]} each</p>
+      <p>{formatCurrency(pricePerItem[optionType])} each</p>
       <p>
         {title} total: {orderDetails.totals[optionType]}
       </p>
