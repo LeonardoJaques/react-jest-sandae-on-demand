@@ -26,4 +26,10 @@ create a file in .vscode with name => settings.json
 install: npm i -D eslint-plugin-testing-library eslint-plugin-jest-dom
 zsh: First commit: gc -am"First Commit" && gp
 
+Mock Service Works: npm i -D msw
+https://mswjs.io/
+https://mswjs.io/docs/getting-started/integrate/node
+
+install axios
+
 

@@ -1,11 +1,14 @@
-import './App.css';
-import SummaryForm from './pages/summary/SummaryForm';
+import { Container } from 'react-bootstrap';
+import { OrderDetailsProvider } from './pages/contexts/OrderDetails';
+import OrderEntry from './pages/entry/OrderEntry';
 
 function App() {
   return (
-    <div>
-      <SummaryForm />
-    </div>
+    <Container>
+      <OrderDetailsProvider>
+        <OrderEntry />
+      </OrderDetailsProvider>
+    </Container>
   );
 }
 
